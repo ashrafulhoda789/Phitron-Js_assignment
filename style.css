@@ -27,10 +27,12 @@ header {
 }
 
 .search-bar button {
-  padding: 8px 15px;
+  padding: 5px 15px;
   border: none;
-  background: #ffb703;
-  color: #222;
+  background: #d0ae5a;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -51,6 +53,7 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 15px;
+  color: black;
 }
 
 .card {
