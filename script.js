@@ -11,9 +11,7 @@ function loadDrinks() {
         if (data.drinks) displayDrinks(data.drinks);
         else document.getElementById('drink-container').innerHTML = "<h3>No Default Drinks Found</h3>";
     })
-    .catch(() => {
-        document.getElementById('drink-container').innerHTML = "<h3>Failed to load data</h3>";
-    });
+    
 }
 
 function displayDrinks(drinks) {
@@ -24,12 +22,12 @@ function displayDrinks(drinks) {
         const div = document.createElement('div');
         div.classList.add('card');
         div.innerHTML = `
-        <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}">
-        <h3>${drink.strDrink}</h3>
-        <p><b>Category:</b> ${drink.strCategory}</p>
-        <p>${drink.strInstructions.slice(0, 15)}...</p>
-        <button onclick="addToGroup('${drink.strDrink}')">Add to Group</button>
-        <button onclick="showDetails('${drink.idDrink}')">Details</button>
+            <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}">
+            <h3>${drink.strDrink}</h3>
+            <p><b>Category:</b> ${drink.strCategory}</p>
+            <p>${drink.strInstructions.slice(0, 15)}...</p>
+            <button onclick="addToGroup('${drink.strDrink}')">Add to Group</button>
+            <button onclick="showDetails('${drink.idDrink}')">Details</button>
         `;
         container.appendChild(div);
     });
@@ -49,9 +47,7 @@ function searchDrink() {
             if (data.drinks) displayDrinks(data.drinks.slice(0, 8));
             else document.getElementById('drink-container').innerHTML = "<h3>No Drink Found </h3>";
         })
-        .catch(() => {
-            document.getElementById('drink-container').innerHTML = "<h3>Error while searching!</h3>";
-        });
+        
 }
 
 function addToGroup(drinkName) {
