@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #5a189a;
+}
+
+header {
+  text-align: center;
+  background: #1A0B2E;
+  color: white;
+  padding: 20px 0;
+}
+
+.search-bar {
+  margin-top: 10px;
+}
+
+.search-bar input {
+  padding: 8px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 8px 15px;
+  border: none;
+  background: #ffb703;
+  color: #222;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  color: white;
+}
+
+.title{
+    margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card button {
+  margin: 5px;
+  padding: 6px 10px;
+  border: none;
+  background: #5a189a;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:nth-child(5) {
+  background: #ffb703;
+  color: black;
+}
+
+#group-section {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: black;
+}
+
+#group-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+#group-list li {
+  background: #5a189a;
+  padding: 6px;
+  margin: 4px 0;
+  border-radius: 5px;
+  color: white;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 600px;
+  border-radius: 10px;
+  position: relative;
+  background: #5a189a;
+  color: white;
+  overflow-y: auto;
+}
+
+.modal-item{
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
